@@ -1,0 +1,121 @@
+* {
+	text-transform: capitalize;
+}
+
+body {
+	background-color: grey;
+	padding:  10px;
+}
+
+main {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: "profile work work work"
+						 "profile education education education"
+						 "footer  footer footer footer";
+	grid-gap: 0.4rem;
+}
+
+
+footer {
+	background-color: green;
+	color:  white;
+	grid-area: footer;
+	text-align: center;
+}
+
+footer i {
+	color: white;
+}
+
+.profile {
+	background-color: white;
+	grid-area: profile;
+	border-radius: 5px;
+	color: grey;
+}
+
+.work-experience {
+	display: flex;
+	background-color: lightcyan;
+	flex-direction: column;
+	justify-content: space-between;
+	grid-area: work;
+	border-radius: 5px;
+	padding-top: 5px;
+}
+
+.education {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	grid-area: education;
+	background-color: lightcoral;
+	border-radius: 5px;
+	padding-top: 5px;
+}
+
+@media only screen and (max-width: 550px) {
+	main {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: "profile"
+							 "work"
+							 "education"
+							 "footer";
+
+	}
+
+	#img-profile {
+		min-height: 40%;
+	}
+}
+
+
+#img-profile {
+	background: url("./images/avatar_hat.jpg");
+	background-size: cover;
+	color: black;
+	display: flex;
+	max-width: 100%;
+	height: 160px;
+	justify-content: flex-start;
+	align-items: flex-end;
+	padding-left: 8px;
+}
+
+.about {
+	margin: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+i {
+	color: green;
+	padding-right: 5px;
+}
+
+.skills {
+	margin-top: 2rem;
+}
+
+.skill {
+	margin-top: 1rem;
+}
+
+.languages {
+	margin-top: 2rem;
+}
+
+.language {
+	margin-top: 1rem;
+}
+
+.experience {
+	margin-top: 1rem;
+}
+
+.educations {
+	margin-top: 1rem;
+}
